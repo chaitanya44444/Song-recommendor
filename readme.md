@@ -7,7 +7,8 @@ The recommender is built using data from the Spotify Dataset (1921-2020) | 600k+
 You can access the live version of the Song Recommender app at:
 
 https://chaitanyav.xyz/
-https://chaitanya44444-song-recommendor-main-vxifde.streamlit.app/
+https://pd6ddf-8501.csb.app/
+https://chaitanya44444-song-recommendor-main-vxifde.streamlit.app/ (works sometimes)
 # 🔍 Features
 Interactive user interface built with Streamlit
 Utilizes various data science and machine learning methods for generating recommendations
