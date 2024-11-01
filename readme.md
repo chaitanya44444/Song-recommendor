@@ -17,20 +17,21 @@ To run the Song Recommender app locally, follow these steps:
 
 # Clone the repository
 
-<pre>```
+<pre>
 git clone https://github.com/chaitanya44444/Song-recommendor.git
-   cd Song-recommendor```
+cd Song-recommendor
 </pre>
 Install dependencies Make sure you have Python installed. Then install required packages:
 <pre>
-```
+
 pip install -r requirements.txt
-Run the application Start the app using Streamlit:
-```
-Run the App
-```</pre> 
+</pre> 
+# Run the application Start the app using Streamlit:
+
+
 <pre>
-streamlit run main.py```</pre>
+streamlit run main.py</pre>
+
 Access the app Open your browser and go to http://localhost:8501 to access the app.
 
 # 📊 Data Science and Machine Learning Techniques
