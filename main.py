@@ -1,16 +1,18 @@
 import os
 
+
 os.system('pip install spotipy streamlit scikit-learn matplotlib streamlit-mic-recorder')
 
 import streamlit as st
 import pandas as pd
 import json
-import threading
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
+
+
 from streamlit_mic_recorder import mic_recorder, speech_to_text
 
 st.set_page_config(page_title="Song Recommender", page_icon="🎵", layout="centered", initial_sidebar_state="expanded")
@@ -20,10 +22,8 @@ SPOTIPY_CLIENT_ID = '36699e378ba8401aa2bc8b72a494b107'
 SPOTIPY_CLIENT_SECRET = '56a4675e30ac4f7d9d06c1dcfdfa2d82'
 SPOTIPY_REDIRECT_URI = 'http://localhost:8888/callback'
 
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=SPOTIPY_CLIENT_ID,
-                                               client_secret=SPOTIPY_CLIENT_SECRET,
-                                               redirect_uri=SPOTIPY_REDIRECT_URI,
-                                               scope="user-library-read playlist-modify-public"))
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=SPOTIPY_CLIENT_ID,client_secret=SPOTIPY_CLIENT_SECRET,redirect_uri=SPOTIPY_REDIRECT_URI,
+cope="user-library-read playlist-modify-public"))
 
 @st.cache_data
 def load_data():
@@ -127,10 +127,8 @@ def visualize_attributes(similar_songs):
         plt.legend(wedges, avg_values.index, title="Attributes", loc="upper right", bbox_to_anchor=(1, 1))
 
         st.pyplot(plt)
-
-
 st.title("Song Recommender 🎵")
-st.sidebar.title("Settings")
+st.sidebar.title("Why u here???????????????????????????????????????????????????????????????")
 
 user_input_method = st.radio("Choose input method:", ("Text Input", "Voice Input (Artist)", "Voice Input (Song)", "Voice Input (Both)"))
 
@@ -179,7 +177,6 @@ if recommend_btn and st.session_state.user_input:
         visualize_attributes(similar_songs)
         st.write("Searching Spotify...")
         spotify_results = search_on_spotify(st.session_state.user_input)
-
         cols = st.columns(5)  
         for idx, song in enumerate(spotify_results):
             with cols[idx % 5]:  
